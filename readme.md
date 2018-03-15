@@ -11,3 +11,4 @@
 * DBPORT=3306
 * DBSOCKET=1
 * PREFIX=mdl_
+* LANG=es
