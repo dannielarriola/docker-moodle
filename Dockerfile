@@ -43,7 +43,7 @@ RUN apt-get autoremove -y
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN git clone -b MOODLE_32_STABLE https://github.com/moodle/moodle.git /var/www/html
+RUN git clone -b MOODLE_33_STABLE https://github.com/moodle/moodle.git /var/www/html
 
 RUN mkdir /var/www/moodledata && chown www-data /var/www/moodledata && \
     mkdir /var/www/phpunitdata && chown www-data /var/www/phpunitdata && \
@@ -57,7 +57,7 @@ ENV WWWROOT=http://localhost
 ENV DBTYPE=mariadb
 ENV DBHOST=localhost
 ENV DBNAME=moodle
-ENV DBUSER=root
+ENV DBUSER=dbuser
 ENV DBPASS=123456
 ENV DBPORT=3306
 ENV DBSOCKET=1
