@@ -1,14 +1,3 @@
-# Dockerfile Moodle 3.2
+# Dockerfile Moodle
 
-## Environment Variables
-
-* WWWROOT=http://localhost
-* DBTYPE=mariadb
-* DBHOST=localhost
-* DBNAME=moodle
-* DBUSER=root
-* DBPASS=123456
-* DBPORT=3306
-* DBSOCKET=1
-* PREFIX=mdl_
-* LANG=es
+# Ver los diferentes branch para diferentes versiones
