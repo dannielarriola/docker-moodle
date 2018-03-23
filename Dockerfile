@@ -1,4 +1,4 @@
-FROM php:5.6-apache
+FROM php:7.0-apache
 
 RUN set -e
 
@@ -43,7 +43,8 @@ RUN apt-get autoremove -y
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN git clone -b MOODLE_33_STABLE https://github.com/moodle/moodle.git /var/www/html
+# clone Moodle source code
+RUN git clone -b MOODLE_34_STABLE https://github.com/moodle/moodle.git /var/www/html
 
 RUN mkdir /var/www/moodledata && chown www-data /var/www/moodledata && \
     mkdir /var/www/phpunitdata && chown www-data /var/www/phpunitdata && \
@@ -52,7 +53,7 @@ RUN mkdir /var/www/moodledata && chown www-data /var/www/moodledata && \
 
 ADD config.php /var/www/html/config.php
 
-
+# Env vars
 ENV WWWROOT=http://localhost
 ENV DBTYPE=mariadb
 ENV DBHOST=localhost
