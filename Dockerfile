@@ -44,7 +44,7 @@ RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 
 # clone Moodle source code
-RUN git clone -b MOODLE_34_STABLE https://github.com/moodle/moodle.git /var/www/html
+RUN git clone https://github.com/moodle/moodle.git /var/www/html
 
 RUN mkdir /var/www/moodledata && chown www-data /var/www/moodledata && \
     mkdir /var/www/phpunitdata && chown www-data /var/www/phpunitdata && \

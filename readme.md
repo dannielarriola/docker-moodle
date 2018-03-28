@@ -1,4 +1,4 @@
-# Dockerfile Moodle 3.4
+# Dockerfile Moodle Alpha
 
 ## Environment Variables
 
